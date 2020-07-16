@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const ts = require("gulp-typescript");
+const uglify = require("gulp-uglify");
 const autoprefixer = require("gulp-autoprefixer");
 const imagemin = require("gulp-imagemin");
 const cache = require("gulp-cache");
@@ -14,7 +15,7 @@ function style() {
       .src("./scss/**/*.scss")
 
       // 2. pass file throughsass compiler
-      .pipe(sass())
+      .pipe(sass({ outputStyle: "compressed" }))
 
       // Prefix the CSS with appropriate browser fallbacks
       .pipe(autoprefixer(/* get browserslist from package.json */))
@@ -31,6 +32,7 @@ function script() {
   return gulp
     .src("./ts/**/*.ts")
     .pipe(ts("tsconfig.json"))
+    .pipe(uglify())
     .pipe(gulp.dest("./app/js"))
     .pipe(browserSync.stream());
 }
