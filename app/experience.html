@@ -100,7 +100,7 @@
 				</button>
 
 				<ul class="nav-links">
-					<li>
+					<li class="current">
 						<a href="/experience"
 							><span class="fas fa-laptop-code" aria-hidden="true"></span>
 							Experience</a
@@ -117,7 +117,7 @@
 						>
 					</li>
 					<li>
-						<a href="/contact"
+						<a href="/#contact"
 							><span class="fas fa-at" aria-hidden="true"></span> Contact</a
 						>
 					</li>
@@ -126,71 +126,130 @@
 		</nav>
 
 		<main class="container">
-			<article id="about">
-				<h2>
-					<span class="fas fa-microchip" aria-hidden="true"></span>
-					About Tim
-				</h2>
-				<img class="avatar" alt="Profile picture of Tim" src="./images/avatar.jpg" />
-				<p>
-					Confident front-end web developer with experience in back-end &amp; software
-					development who also offers impartial advice on web solutions. A perpetual
-					learner with a genuine passion for technology, science, learning and DIY. To
-					find out more about Tim, visit the <a href="/about">About Tim</a> section.
-				</p>
+			<article id="experience" class="card">
+				<header>
+					<h2>
+						<span class="fas fa-laptop-code" aria-hidden="true"></span>
+						Experience
+					</h2>
+				</header>
+				<section>
+					<h3>
+						<a href="https://www.bpp.com" title="View BPP's website">BPP</a>
+						<span class="duration"
+							><time datetime="2015-06-01">Jun 2015</time> &ndash; Present
+							<span class="calculate-date" data-start="2015-06-01" data-end=""></span
+						></span>
+					</h3>
 
-				<div style="clear: both" role="none"></div>
-				<p>
-					If you want to get in touch you can find me online with the links in the Footer,
-					email me on
-					<a href="mailto:hi@timbryan.dev">hi@timbryan.dev</a> or use the
-					<a href="#contact"> contact form</a> below.
-				</p>
+					<h4>Digital Technology Developer</h4>
+					<span class="duration"
+						><time datetime="2018-09-01">Sep 2018</time> &ndash; Present
+						<span class="calculate-date" data-start="2018-09-01" data-end=""></span
+					></span>
+					<ul class="arrow">
+						<li>
+							Line manage members of the Digital Learning Development Team within the
+							<abbr title="Digital Technology Solutions">DTS</abbr>
+							unit.
+						</li>
+						<li>
+							Aid in the creation, deployment and support of e-learning material,
+							either bespoke, rapid developed or VLE platform-based and to support the
+							delivery of various developments including Moodle and mobile
+							applications.
+						</li>
+						<li>
+							Working with various web and desktop technologies, being at the
+							forefront of our digital product development.
+						</li>
+						<li>
+							Work with senior stakeholders to develop and deliver new and innovative
+							learning materials and platforms.
+						</li>
+						<li>Mentoring new starters and apprentices</li>
+					</ul>
+					<h4>E-Learning Developer</h4>
+					<span class="duration"
+						><time datetime="2015-06-01">Jun 2015</time> &ndash; Aug 2018
+						<span
+							class="calculate-date"
+							data-start="2015-06-01"
+							data-end="2018-08-31"
+						></span
+					></span>
+					<ul class="arrow">
+						<li>
+							Maintain, develop and improve existing E-Learning products and
+							resources.
+						</li>
+						<li>
+							Develop new and innovative products, assessments and user experiences
+							online
+						</li>
+						<li>Develop tools to automate manual tasks</li>
+						<li>
+							Supporting internal and external clients, staff and students with
+							technical support and troubleshooting.
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>
+						<a
+							href="https://www.stockport.ac.uk"
+							title="View Stockport College's website"
+							>Stockport College</a
+						>
+					</h3>
+					<h4>E-Learning &amp; E-Resources Developer</h4>
+					<p class="duration">
+						<time datetime="2014-06-01">Jun 2014</time> -
+						<time datetime="2015-05-01">May 2015</time>
+						<span
+							class="calculate-date"
+							data-start="2014-06-01"
+							data-end="2015-05-31"
+						></span>
+					</p>
+					<ul class="arrow">
+						<li>
+							Maintain, develop and improve existing E-Learning products and resources
+							using legacy and current web technologies
+						</li>
+						<li>Troubleshooting and technical support for students and staff</li>
+						<li>
+							Perform a significant part in the migrating from the existing out-dated
+							VLE over to a bleeding-edge, purpose-built Moodle instance
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>
+						<a title="Site is no longer being hosted">WOTMATSAW.com</a>
+					</h3>
+					<h4>WordPress Developer &amp; Site Administrator</h4>
+					<p class="duration">
+						<time datetime="2016-09-01">Sept 2016</time> -
+						<time datetime="2019-02-01">Feb 2019</time>
+						<span
+							class="calculate-date"
+							data-start="2016-09-01"
+							data-end="2019-02-28"
+						></span>
+					</p>
+
+					<p>
+						This project is no longer active, but at the time that it was, I was
+						responsible for the following:
+					</p>
+					<ul class="arrow">
+						<li>Host, maintain and further develop a custom WordPress installation</li>
+						<li>Ongoing technical support and troubleshooting</li>
+						<li>Developing ideas into working features</li>
+					</ul>
+				</section>
 			</article>
-
-			<section id="contact" class="contact container card">
-				<h2><span class="fas fa-at" aria-hidden="true"></span> Contact</h2>
-				<p>
-					Use the form below to get in touch. Alternatively, you can send an email
-					directly to
-					<a href="mailto:hi@timbryan.dev" title="Send Tim an email">hi@timbryan.dev</a>.
-				</p>
-				<form action="https://formspree.io/meqrploz" method="post">
-					<label
-						><span class="sr-only" role="none">Name:</span>
-						<input
-							required
-							type="text"
-							class="name"
-							name="name"
-							placeholder="Your Name"
-					/></label>
-					<label>
-						<span class="sr-only" role="none">Email:</span>
-						<input
-							required
-							type="email"
-							class="email"
-							name="email"
-							placeholder="Email Address"
-					/></label>
-					<br />
-					<label>
-						<span class="sr-only" role="none">Message:</span>
-						<textarea
-							required
-							class="message"
-							name="message"
-							placeholder="Type your Message"
-							rows="6"
-						></textarea>
-					</label>
-					<p class="form-status"></p>
-					<button class="submit" type="submit">
-						<i class="fas fa-paper-plane"></i> Send
-					</button>
-				</form>
-			</section>
 		</main>
 
 		<footer id="footer">
