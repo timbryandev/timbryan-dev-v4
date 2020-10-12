@@ -111,13 +111,13 @@
 							><span class="fas fa-code" aria-hidden="true"></span> Projects</a
 						>
 					</li>
-					<li>
+					<li class="current">
 						<a href="/education"
 							><span class="fas fa-university" aria-hidden="true"></span> Education</a
 						>
 					</li>
 					<li>
-						<a href="/contact"
+						<a href="/#contact"
 							><span class="fas fa-at" aria-hidden="true"></span> Contact</a
 						>
 					</li>
@@ -126,71 +126,69 @@
 		</nav>
 
 		<main class="container">
-			<article id="about">
-				<h2>
-					<span class="fas fa-microchip" aria-hidden="true"></span>
-					About Tim
-				</h2>
-				<img class="avatar" alt="Profile picture of Tim" src="./images/avatar.jpg" />
-				<p>
-					Confident front-end web developer with experience in back-end &amp; software
-					development who also offers impartial advice on web solutions. A perpetual
-					learner with a genuine passion for technology, science, learning and DIY. To
-					find out more about Tim, visit the <a href="/about">About Tim</a> section.
-				</p>
-
-				<div style="clear: both" role="none"></div>
-				<p>
-					If you want to get in touch you can find me online with the links in the Footer,
-					email me on
-					<a href="mailto:hi@timbryan.dev">hi@timbryan.dev</a> or use the
-					<a href="#contact"> contact form</a> below.
-				</p>
+			<article id="education" class="card">
+				<header>
+					<h2>
+						<span class="fas fa-university" aria-hidden="true"></span>
+						Education
+					</h2>
+				</header>
+				<section>
+					<h3>FdSc Enterprise Computing</h3>
+					<p>
+						<a href="https://mmu.ac.uk" title="View MMU's website"
+							>Manchester Metropolitan University</a
+						>
+					</p>
+					<ul class="arrow">
+						<li>
+							Web &amp; Multimedia (HTML5, CSS3, Javascript, jQuery, PHP, MySQL, Adobe
+							CS6 Web and Design Suite)
+						</li>
+						<li>Advanced Programming (Java)</li>
+						<li>Information Systems (Oracle Databases, SQL, Normalisation, UML)</li>
+						<li>Computer System Fundamentals</li>
+						<li>Career Development</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Level 2 Retail Apprenticeship</h3>
+					<p>
+						<a
+							href="https://www.derby-college.ac.uk/"
+							title="View Derby College's website"
+							>Derby College</a
+						>
+					</p>
+					<ul class="arrow">
+						<li>Customer Service in the Retail Sector</li>
+						<li>The Retail Selling Process</li>
+						<li>
+							How Individuals and Teams Contribute to the Effectiveness of a Retail
+							Business
+						</li>
+						<li>
+							How Retail Businesses Maintain Health &amp; Safety on their Premises
+						</li>
+						<li>Security and Loss Prevention in a Retail Business</li>
+						<li>Handling of Customer Payments in a Retail Business</li>
+					</ul>
+				</section>
+				<section>
+					<h3>A-Levels</h3>
+					<p>Marple Sixth Form College</p>
+					<ul class="arrow">
+						<li>BTEC Cert Business Studies</li>
+						<li>Electronics</li>
+					</ul>
+				</section>
+				<section>
+					<h3>GCSEs</h3>
+					<p>
+						11 at A-C including Maths, English, Tripple Science, ICT, Music, Graphics…
+					</p>
+				</section>
 			</article>
-
-			<section id="contact" class="contact container card">
-				<h2><span class="fas fa-at" aria-hidden="true"></span> Contact</h2>
-				<p>
-					Use the form below to get in touch. Alternatively, you can send an email
-					directly to
-					<a href="mailto:hi@timbryan.dev" title="Send Tim an email">hi@timbryan.dev</a>.
-				</p>
-				<form action="https://formspree.io/meqrploz" method="post">
-					<label
-						><span class="sr-only" role="none">Name:</span>
-						<input
-							required
-							type="text"
-							class="name"
-							name="name"
-							placeholder="Your Name"
-					/></label>
-					<label>
-						<span class="sr-only" role="none">Email:</span>
-						<input
-							required
-							type="email"
-							class="email"
-							name="email"
-							placeholder="Email Address"
-					/></label>
-					<br />
-					<label>
-						<span class="sr-only" role="none">Message:</span>
-						<textarea
-							required
-							class="message"
-							name="message"
-							placeholder="Type your Message"
-							rows="6"
-						></textarea>
-					</label>
-					<p class="form-status"></p>
-					<button class="submit" type="submit">
-						<i class="fas fa-paper-plane"></i> Send
-					</button>
-				</form>
-			</section>
 		</main>
 
 		<footer id="footer">

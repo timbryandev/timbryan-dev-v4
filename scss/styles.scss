@@ -172,6 +172,15 @@ h2 .svg-inline--fa {
 		:hover a {
 			color: $dark-green;
 		}
+
+		.current {
+			background-color: var(--flame);
+			color: $dark-green;
+		}
+
+		.current a {
+			color: $dark-green;
+		}
 	}
 
 	.nav-dropdown-toggle {
@@ -202,16 +211,17 @@ h2 .svg-inline--fa {
 	}
 }
 
-.card {
-	background: var(--deep-jungle-green);
-	border-radius: 5px;
-	padding: $padding;
-	padding-top: 0;
-	margin: 2em 0;
-}
+// Not sure I want to keep the card component, looks wuite dated now
+// .card {
+// 	background: var(--deep-jungle-green);
+// 	border-radius: 5px;
+// 	padding: $padding;
+// padding-top: 0;
+// margin: 2em 0;
+// }
 
 main,
-#contact,
+// #contact,
 #footer {
 	padding: $padding;
 }
@@ -225,6 +235,20 @@ main,
 	.copyright {
 		text-align: center;
 		margin-top: 50px;
+	}
+}
+
+section#OnlinePresence {
+	.links {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-evenly;
+		text-align: center;
+	}
+	a {
+		margin: 15px;
+		text-decoration: none;
 	}
 }
 

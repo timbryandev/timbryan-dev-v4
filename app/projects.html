@@ -106,7 +106,7 @@
 							Experience</a
 						>
 					</li>
-					<li>
+					<li class="current">
 						<a href="/projects"
 							><span class="fas fa-code" aria-hidden="true"></span> Projects</a
 						>
@@ -117,7 +117,7 @@
 						>
 					</li>
 					<li>
-						<a href="/contact"
+						<a href="/#contact"
 							><span class="fas fa-at" aria-hidden="true"></span> Contact</a
 						>
 					</li>
@@ -126,71 +126,76 @@
 		</nav>
 
 		<main class="container">
-			<article id="about">
-				<h2>
-					<span class="fas fa-microchip" aria-hidden="true"></span>
-					About Tim
-				</h2>
-				<img class="avatar" alt="Profile picture of Tim" src="./images/avatar.jpg" />
-				<p>
-					Confident front-end web developer with experience in back-end &amp; software
-					development who also offers impartial advice on web solutions. A perpetual
-					learner with a genuine passion for technology, science, learning and DIY. To
-					find out more about Tim, visit the <a href="/about">About Tim</a> section.
-				</p>
-
-				<div style="clear: both" role="none"></div>
-				<p>
-					If you want to get in touch you can find me online with the links in the Footer,
-					email me on
-					<a href="mailto:hi@timbryan.dev">hi@timbryan.dev</a> or use the
-					<a href="#contact"> contact form</a> below.
-				</p>
+			<article id="projects" class="card">
+				<header>
+					<h2>
+						<span class="fas fa-code" aria-hidden="true"></span>
+						Projects
+					</h2>
+				</header>
+				<section>
+					<h3>Multi-purpose home server</h3>
+					<p>
+						The original plan was to use a Rasberry Pi 3B+ until I fried the CPU
+						(shorted the 5V to the 3.3V rail…). So, I&apos;ve currently assembled a
+						server from old desktop computer parts, running Debian at its heart with a
+						typical LAMP setup plus other goodies for experimenting and development
+						stuff.
+					</p>
+					<p>What it does now</p>
+					<ul class="arrow">
+						<li>Nextcloud: for easy file backups, storing and sharing</li>
+						<li>JellyFin: easy music and video consumption</li>
+					</ul>
+					<p>Things I hope to do in the future</p>
+					<ul class="arrow">
+						<li>CCTV Live feed, backup, and offsite backups in case of sabotage</li>
+						<li>Simple home automation</li>
+					</ul>
+				</section>
+				<section>
+					<h3>"PiHole"</h3>
+					<p>
+						The goal: network-wide ad blocking using a Raspberry Pi and
+						<a href="https://pi-hole.net/" title="Go to PiHole's website">PiHole</a>.
+					</p>
+					<p>
+						Since I finished getting this working and implemented it into my home
+						router, I can now enjoy the wonders of the internet with the peace of mind
+						that
+						<strong>all</strong> the internet-connected devices at home will be free
+						from <em>most</em> ads and tracking services. This makes everything feel
+						quicker by loading fewer resources, safer by allowing me to block suspicious
+						domains network-wide and enjoy the web with fewer interruptions. I
+						pay/donate to the services and products I want to enjoy and feel I
+						shouldn&apos;t need to subsidise them any further with my ad and tracking
+						data.
+					</p>
+				</section>
+				<section>
+					<h3>Quizzing Buzzers</h3>
+					<p>
+						A friend likes to host a bi-annual quiz and for a long time, they wished to
+						have a "fastest finger" round but was limited by his options for
+						implementing such a type of round.
+					</p>
+					<p>
+						Enter Tim, with an Arduino Uno and a couple of weekends. I built 3 physical
+						buzzers and a control box for the host. The code on the Arduino controlled
+						the different states, kept score for each buzzer and also played tunes that
+						had to be pre-programmed as an array of frequencies and durations to play
+						through a simple buzzer. I went with the Imperial March, the Jurrasic Park
+						Theme and the James Bond 007 Theme as I thought these were widely
+						recognisable and different enough from each other that we could easily work
+						out which team buzzed first even though it was displayed on the host&apos;s
+						LCD.
+					</p>
+					<p>
+						Currently working on a V2.0 after feedback from the successful first outing
+						- hoping they will see the light of day again in a future quiz round.
+					</p>
+				</section>
 			</article>
-
-			<section id="contact" class="contact container card">
-				<h2><span class="fas fa-at" aria-hidden="true"></span> Contact</h2>
-				<p>
-					Use the form below to get in touch. Alternatively, you can send an email
-					directly to
-					<a href="mailto:hi@timbryan.dev" title="Send Tim an email">hi@timbryan.dev</a>.
-				</p>
-				<form action="https://formspree.io/meqrploz" method="post">
-					<label
-						><span class="sr-only" role="none">Name:</span>
-						<input
-							required
-							type="text"
-							class="name"
-							name="name"
-							placeholder="Your Name"
-					/></label>
-					<label>
-						<span class="sr-only" role="none">Email:</span>
-						<input
-							required
-							type="email"
-							class="email"
-							name="email"
-							placeholder="Email Address"
-					/></label>
-					<br />
-					<label>
-						<span class="sr-only" role="none">Message:</span>
-						<textarea
-							required
-							class="message"
-							name="message"
-							placeholder="Type your Message"
-							rows="6"
-						></textarea>
-					</label>
-					<p class="form-status"></p>
-					<button class="submit" type="submit">
-						<i class="fas fa-paper-plane"></i> Send
-					</button>
-				</form>
-			</section>
 		</main>
 
 		<footer id="footer">
