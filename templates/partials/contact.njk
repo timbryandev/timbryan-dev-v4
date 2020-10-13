@@ -1,0 +1,32 @@
+<!-- contact.njk -->
+
+<section id="contact" class="contact container card">
+	<h2><span class="fas fa-at" aria-hidden="true"></span> Contact</h2>
+	<p>
+		Use the form below to get in touch. Alternatively, you can send an email directly to
+		<a href="mailto:hi@timbryan.dev" title="Send Tim an email">hi@timbryan.dev</a>.
+	</p>
+	<form action="https://formspree.io/meqrploz" method="post">
+		<label
+			><span class="sr-only" role="none">Name:</span>
+			<input required type="text" class="name" name="name" placeholder="Your Name"
+		/></label>
+		<label>
+			<span class="sr-only" role="none">Email:</span>
+			<input required type="email" class="email" name="email" placeholder="Email Address"
+		/></label>
+		<br />
+		<label>
+			<span class="sr-only" role="none">Message:</span>
+			<textarea
+				required
+				class="message"
+				name="message"
+				placeholder="Type your Message"
+				rows="6"
+			></textarea>
+		</label>
+		<p class="form-status"></p>
+		<button class="submit" type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+	</form>
+</section>
