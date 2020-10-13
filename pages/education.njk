@@ -1,0 +1,67 @@
+<!-- education.njk -->
+
+{% extends "layout.njk" %} 
+
+{% block content %}
+
+{{ nav.current('education') }}
+
+<main class="container">
+	<article id="education" class="card">
+		<header>
+			<h2>
+				<span class="fas fa-university" aria-hidden="true"></span>
+				Education
+			</h2>
+		</header>
+		<section>
+			<h3>FdSc Enterprise Computing</h3>
+			<p>
+				<a href="https://mmu.ac.uk" title="View MMU's website"
+					>Manchester Metropolitan University</a
+				>
+			</p>
+			<ul class="arrow">
+				<li>
+					Web &amp; Multimedia (HTML5, CSS3, Javascript, jQuery, PHP, MySQL, Adobe CS6 Web
+					and Design Suite)
+				</li>
+				<li>Advanced Programming (Java)</li>
+				<li>Information Systems (Oracle Databases, SQL, Normalisation, UML)</li>
+				<li>Computer System Fundamentals</li>
+				<li>Career Development</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Level 2 Retail Apprenticeship</h3>
+			<p>
+				<a href="https://www.derby-college.ac.uk/" title="View Derby College's website"
+					>Derby College</a
+				>
+			</p>
+			<ul class="arrow">
+				<li>Customer Service in the Retail Sector</li>
+				<li>The Retail Selling Process</li>
+				<li>
+					How Individuals and Teams Contribute to the Effectiveness of a Retail Business
+				</li>
+				<li>How Retail Businesses Maintain Health &amp; Safety on their Premises</li>
+				<li>Security and Loss Prevention in a Retail Business</li>
+				<li>Handling of Customer Payments in a Retail Business</li>
+			</ul>
+		</section>
+		<section>
+			<h3>A-Levels</h3>
+			<p>Marple Sixth Form College</p>
+			<ul class="arrow">
+				<li>BTEC Cert Business Studies</li>
+				<li>Electronics</li>
+			</ul>
+		</section>
+		<section>
+			<h3>GCSEs</h3>
+			<p>11 at A-C including Maths, English, Tripple Science, ICT, Music, Graphics…</p>
+		</section>
+	</article>
+</main>
+{% endblock %}
