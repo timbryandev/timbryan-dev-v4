@@ -1,0 +1,65 @@
+<!-- navgation-macro.njk -->
+
+{% macro current(currentPage='home') %}
+<nav class="navbar">
+	<div class="container" role="container">
+		<a class="logo" href="/">
+			TIM
+			<svg
+				width="24"
+				xmlns="http://www.w3.org/2000/svg"
+				class="TBLogo"
+				viewBox="0 0 304.96 451.29"
+			>
+				<polygon
+					class="logo-arrow-right"
+					fill="#fefefe"
+					points="248.96 225.87 150.25 324.59 178.25 352.59 304.96 225.87 178.25 99.16 150.25 127.16 248.96 225.87"
+				/>
+				<polygon
+					class="logo-arrow-left"
+					fill="#95c623"
+					points="0 324.58 126.71 451.29 154.71 423.29 56 324.58 154.71 225.86 154.49 225.65 154.71 225.43 56 126.71 154.71 28 126.71 0 0 126.71 98.93 225.65 0 324.58"
+				/>
+			</svg>
+			<span class="text-primary">BRYAN</span>
+		</a>
+
+		<button class="nav-dropdown-toggle" onclick="navToggleDropdown()">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				height="32px"
+				class="nav-hamburger"
+				viewBox="0 0 32 32"
+				width="32px"
+			>
+				<path
+					d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"
+				/>
+			</svg>
+		</button>
+
+		<ul class="nav-links">
+			<li class="{%if currentPage == 'experience' %} current {% endif %}">
+				<a href="/experience"
+					><span class="fas fa-laptop-code" aria-hidden="true"></span> Experience</a
+				>
+			</li>
+			<li class="{%if currentPage == 'projects' %} current {% endif %}">
+				<a href="/projects"
+					><span class="fas fa-code" aria-hidden="true"></span> Projects</a
+				>
+			</li>
+			<li class="{%if currentPage == 'education' %} current {% endif %}">
+				<a href="/education"
+					><span class="fas fa-university" aria-hidden="true"></span> Education</a
+				>
+			</li>
+			<li>
+				<a href="#contact"><span class="fas fa-at" aria-hidden="true"></span> Contact</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+{% endmacro %}

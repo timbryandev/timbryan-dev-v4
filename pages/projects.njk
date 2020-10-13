@@ -1,0 +1,78 @@
+<!-- projects.njk -->
+
+{% extends "layout.njk" %} 
+
+{% block content %}
+
+{{ nav.current('projects') }}
+
+<main class="container">
+	<article id="projects" class="card">
+		<header>
+			<h2>
+				<span class="fas fa-code" aria-hidden="true"></span>
+				Projects
+			</h2>
+		</header>
+		<section>
+			<h3>Multi-purpose home server</h3>
+			<p>
+				The original plan was to use a Rasberry Pi 3B+ until I fried the CPU (shorted the 5V
+				to the 3.3V rail…). So, I&apos;ve currently assembled a server from old desktop
+				computer parts, running Debian at its heart with a typical LAMP setup plus other
+				goodies for experimenting and development stuff.
+			</p>
+			<p>What it does now</p>
+			<ul class="arrow">
+				<li>Nextcloud: for easy file backups, storing and sharing</li>
+				<li>JellyFin: easy music and video consumption</li>
+			</ul>
+			<p>Things I hope to do in the future</p>
+			<ul class="arrow">
+				<li>CCTV Live feed, backup, and offsite backups in case of sabotage</li>
+				<li>Simple home automation</li>
+			</ul>
+		</section>
+		<section>
+			<h3>"PiHole"</h3>
+			<p>
+				The goal: network-wide ad blocking using a Raspberry Pi and
+				<a href="https://pi-hole.net/" title="Go to PiHole's website">PiHole</a>.
+			</p>
+			<p>
+				Since I finished getting this working and implemented it into my home router, I can
+				now enjoy the wonders of the internet with the peace of mind that
+				<strong>all</strong> the internet-connected devices at home will be free from
+				<em>most</em> ads and tracking services. This makes everything feel quicker by
+				loading fewer resources, safer by allowing me to block suspicious domains
+				network-wide and enjoy the web with fewer interruptions. I pay/donate to the
+				services and products I want to enjoy and feel I shouldn&apos;t need to subsidise
+				them any further with my ad and tracking data.
+			</p>
+		</section>
+		<section>
+			<h3>Quizzing Buzzers</h3>
+			<p>
+				A friend likes to host a bi-annual quiz and for a long time, they wished to have a
+				"fastest finger" round but was limited by his options for implementing such a type
+				of round.
+			</p>
+			<p>
+				Enter Tim, with an Arduino Uno and a couple of weekends. I built 3 physical buzzers
+				and a control box for the host. The code on the Arduino controlled the different
+				states, kept score for each buzzer and also played tunes that had to be
+				pre-programmed as an array of frequencies and durations to play through a simple
+				buzzer. I went with the Imperial March, the Jurrasic Park Theme and the James Bond
+				007 Theme as I thought these were widely recognisable and different enough from each
+				other that we could easily work out which team buzzed first even though it was
+				displayed on the host&apos;s LCD.
+			</p>
+			<p>
+				Currently working on a V2.0 after feedback from the successful first outing - hoping
+				they will see the light of day again in a future quiz round.
+			</p>
+		</section>
+	</article>
+</main>
+
+{% endblock %}

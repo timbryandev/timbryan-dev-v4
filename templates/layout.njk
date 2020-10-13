@@ -1,0 +1,51 @@
+<!-- layout.njk -->
+
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta charset="UTF-8" />
+
+		<meta content="ie=edge" http-equiv="x-ua-compatible" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<!-- <meta content="#0E4749" name="msapplication-TileColor" />
+<meta content="#0E4749" name="theme-color" /> -->
+
+		<meta
+			name="description"
+			content="Tim Bryan is a UK-based software developer with a love for all things tech, science and DIY"
+		/>
+		<meta
+			name="keywords"
+			content="Tim, Bryan, code, coding, programming, software, developer, electronics, DIY, technology"
+		/>
+		<meta name="author" content="Tim Bryan" />
+		<meta name="copyright" content="Tim Bryan" />
+		<meta name="reply-to" content="hi@timbryan.dev" />
+
+		<meta name="robots" content="index" />
+		<meta name="robots" content="nofollow" />
+		<meta name="revised" content="Thursday, June 11th, 2020, 13:52 pm" />
+
+		<link href="images/logo-w128.png" rel="icon" sizes="128x128" type="image/png" />
+
+		<title>["Tim", "Bryan"]</title>
+
+		<link rel="stylesheet" href="css/styles.css?v=20200929-1555" />
+
+		<script
+			src="https://kit.fontawesome.com/5349427363.js?v=20200929-1555"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		{% include 'header.njk' %}
+		<!-- -->
+		{% import 'macros/navigation-macro.njk' as nav %}
+		<!-- -->
+		{% block content %} {% endblock %}
+		<!-- -->
+		{% include 'footer.njk' %}
+		<script src="js/script.js"></script>
+	</body>
+</html>
