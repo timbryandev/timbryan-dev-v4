@@ -34,6 +34,10 @@ function scrollToTop() {
 
 function initForm() {
 	const form: HTMLFormElement | any = document.querySelector('#contact form');
+	if (!form) {
+		return;
+	}
+
 	const button: HTMLButtonElement = form.querySelector('.submit');
 	const status: HTMLParagraphElement = form.querySelector('.form-status');
 
@@ -54,7 +58,7 @@ function initForm() {
 		const xhr: XMLHttpRequest = new XMLHttpRequest();
 		xhr.open(method, url);
 		xhr.setRequestHeader('Accept', 'application/json');
-		xhr.onreadystatechange = function() {
+		xhr.onreadystatechange = function () {
 			if (xhr.readyState !== XMLHttpRequest.DONE) return;
 			if (xhr.status === 200) {
 				success();
@@ -67,7 +71,7 @@ function initForm() {
 
 	// handle the form submission event
 
-	form.addEventListener('submit', function(evt: Event) {
+	form.addEventListener('submit', function (evt: Event) {
 		evt.preventDefault();
 		const data = new FormData(form);
 		ajax(form.method, form.action, data);
