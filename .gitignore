@@ -1,6 +1,4 @@
 node_modules
-app/images
+app/*
 
-app/css/styles.css
-app/js/script.js
 package-lock.json
