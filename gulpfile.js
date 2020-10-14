@@ -84,7 +84,10 @@ async function watch() {
 	console.log('Launch BrowserSync...');
 	browserSync.init({
 		server: {
-			baseDir: './app'
+			baseDir: './app',
+			serveStaticOptions: {
+				extensions: ['html']
+			}
 		}
 	});
 
