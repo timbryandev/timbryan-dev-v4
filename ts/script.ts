@@ -3,9 +3,9 @@ function calculateDates() {
 		const start: Date = new Date(tag.dataset.start);
 		const end: Date = tag.dataset.end ? new Date(tag.dataset.end) : new Date();
 		const dif: Date = new Date(end.getTime() - start.getTime());
-		const years = dif.getFullYear() - 1970;
-		const months = dif.getMonth() + 1;
-		let outputString = ``;
+		const years: Number = dif.getFullYear() - 1970;
+		const months: Number = dif.getMonth() + 1;
+		let outputString: String = ``;
 		if (years > 0) {
 			outputString += `${years} year${years > 1 ? 's' : ''} `;
 		}
@@ -19,24 +19,35 @@ function calculateDates() {
 }
 
 function navToggleDropdown() {
-	const nav: HTMLElement | any = document.querySelector('.nav-links');
-	if (nav.classList.contains('show')) {
-		nav.classList.remove('show');
+	const navLinks: HTMLElement | null = document.querySelector('.nav-links');
+	if (!navLinks) return;
+
+	if (navLinks.classList.contains('show')) {
+		navLinks.classList.remove('show');
 	} else {
-		nav.classList.add('show');
+		navLinks.classList.add('show');
 	}
 }
 
 function scrollToTop() {
-	const header: HTMLHeadElement | any = document.body.querySelector('#header');
-	header.scrollIntoView();
+	window.scrollTo(0, 0);
+}
+
+function scrollToContent() {
+	const nav: HTMLElement | null = document.querySelector('.navbar');
+	if (!nav) return;
+
+	nav.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function setPagePosition() {
+	scrollToTop();
+	setTimeout(scrollToContent, 1000);
 }
 
 function initForm() {
 	const form: HTMLFormElement | any = document.querySelector('#contact form');
-	if (!form) {
-		return;
-	}
+	if (!form) return;
 
 	const button: HTMLButtonElement = form.querySelector('.submit');
 	const status: HTMLParagraphElement = form.querySelector('.form-status');
@@ -73,12 +84,13 @@ function initForm() {
 
 	form.addEventListener('submit', function (evt: Event) {
 		evt.preventDefault();
-		const data = new FormData(form);
+		const data: FormData = new FormData(form);
 		ajax(form.method, form.action, data);
 	});
 }
 
 function init() {
+	setPagePosition();
 	calculateDates();
 	initForm();
 }
