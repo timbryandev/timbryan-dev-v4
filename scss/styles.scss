@@ -158,18 +158,17 @@ h2 .svg-inline--fa {
 
 		li {
 			display: inline;
+			border-radius: 3px;
+			margin: 0 1px;
 		}
 
 		a {
 			display: block;
+			border-radius: 3px;
 		}
 
 		:hover {
 			background-color: $action;
-			color: $dark-green;
-		}
-
-		:hover a {
 			color: $dark-green;
 		}
 
@@ -178,8 +177,9 @@ h2 .svg-inline--fa {
 			color: $dark-green;
 		}
 
+		:hover a,
 		.current a {
-			color: $dark-green;
+			color: inherit;
 		}
 	}
 
@@ -216,12 +216,12 @@ main.container {
 }
 
 #contact {
-	margin-top:2rem;
+	margin-top: 2rem;
 }
 
 #footer {
 	margin-top: 2rem;
-	padding-bottom:2rem;
+	padding-bottom: 2rem;
 	background-color: $deep-jungle-green;
 	p {
 		font-size: 80%;
