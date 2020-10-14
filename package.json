@@ -5,7 +5,7 @@
 	"scripts": {
 		"build": "gulp build",
 		"watch": "gulp watch",
-		"clean": "prettier --config .prettierrc '**/*.{ts,scss,html}' --write"
+		"format": "prettier --config .prettierrc \"**/*.{ts,scss,html}\" --write"
 	},
 	"author": "",
 	"license": "ISC",
