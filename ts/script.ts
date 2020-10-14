@@ -42,7 +42,7 @@ function scrollToContent() {
 
 function setPagePosition() {
 	scrollToTop();
-	setTimeout(scrollToContent, 1000);
+	setTimeout(scrollToContent, 500);
 }
 
 function initForm() {
