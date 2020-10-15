@@ -1,3 +1,5 @@
+// Initial setup from Gulp v4 - Sass and BrowserSync setup tutorial on https://www.youtube.com/watch?v=QgMQeLymAdU
+
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const ts = require('gulp-typescript');
@@ -76,19 +78,9 @@ function cacheBuster() {
 		.pipe(gulp.dest('./app'));
 }
 
-async function build() {
-	console.log('Building App');
-	nunjucks();
-	style();
-	script();
-	minImages();
-	cacheBuster();
-}
+const build = gulp.series(gulp.parallel(nunjucks, style, script, minImages), cacheBuster);
 
 async function watch() {
-	console.log('Initial Building...');
-	await build();
-
 	console.log('Launch BrowserSync...');
 	browserSync.init({
 		server: {
@@ -109,9 +101,5 @@ async function watch() {
 	gulp.watch('./app/js/**/*.js').on('change', browserSync.reload);
 }
 
-exports.style = style;
-exports.script = script;
-exports.minImages = minImages;
 exports.build = build;
-exports.watch = watch;
-exports.nunjucks = nunjucks;
+exports.watch = gulp.series(build, watch);
