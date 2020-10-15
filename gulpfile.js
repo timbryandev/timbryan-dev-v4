@@ -1,3 +1,5 @@
+// Initial setup from Gulp v4 - Sass and BrowserSync setup tutorial on https://www.youtube.com/watch?v=QgMQeLymAdU
+
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const ts = require('gulp-typescript');
@@ -7,6 +9,7 @@ const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const browserSync = require('browser-sync').create();
 const nunjucksRender = require('gulp-nunjucks-render');
+const replace = require('gulp-replace');
 
 // compile scss into css
 function style() {
@@ -66,21 +69,18 @@ function nunjucks() {
 		.pipe(gulp.dest('./app'));
 }
 
-function build() {
-	console.log('Building App');
-	return new Promise(function (resolve, reject) {
-		style();
-		script();
-		minImages();
-		nunjucks();
-		resolve();
-	});
+function cacheBuster() {
+	const cbString = new Date().getTime();
+	console.log(`Cache busting with timestamp: ${cbString}`);
+	return gulp
+		.src('./app/**/*.html')
+		.pipe(replace(/\?version=\d*/g, `?version=${cbString}`))
+		.pipe(gulp.dest('./app'));
 }
 
-async function watch() {
-	console.log('Initial Building...');
-	await build();
+const build = gulp.series(gulp.parallel(nunjucks, style, script, minImages), cacheBuster);
 
+async function watch() {
 	console.log('Launch BrowserSync...');
 	browserSync.init({
 		server: {
@@ -101,9 +101,5 @@ async function watch() {
 	gulp.watch('./app/js/**/*.js').on('change', browserSync.reload);
 }
 
-exports.style = style;
-exports.script = script;
-exports.minImages = minImages;
 exports.build = build;
-exports.watch = watch;
-exports.nunjucks = nunjucks;
+exports.watch = gulp.series(build, watch);
