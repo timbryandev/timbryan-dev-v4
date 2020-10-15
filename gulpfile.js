@@ -7,6 +7,7 @@ const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const browserSync = require('browser-sync').create();
 const nunjucksRender = require('gulp-nunjucks-render');
+const replace = require('gulp-replace');
 
 // compile scss into css
 function style() {
@@ -66,15 +67,22 @@ function nunjucks() {
 		.pipe(gulp.dest('./app'));
 }
 
-function build() {
+function cacheBuster() {
+	const cbString = new Date().getTime();
+	console.log(`Cache busting with timestamp: ${cbString}`);
+	return gulp
+		.src('./app/**/*.html')
+		.pipe(replace(/\?version=\d*/g, `?version=${cbString}`))
+		.pipe(gulp.dest('./app'));
+}
+
+async function build() {
 	console.log('Building App');
-	return new Promise(function (resolve, reject) {
-		style();
-		script();
-		minImages();
-		nunjucks();
-		resolve();
-	});
+	nunjucks();
+	style();
+	script();
+	minImages();
+	cacheBuster();
 }
 
 async function watch() {

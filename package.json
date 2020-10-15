@@ -1,5 +1,5 @@
 {
-	"name": "new-folder",
+	"name": "timbryan-dev",
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
@@ -7,9 +7,9 @@
 		"watch": "gulp watch",
 		"format": "prettier --config .prettierrc \"**/*.{ts,scss,html}\" --write"
 	},
-	"author": "",
+	"author": "Tim Bryan",
 	"license": "ISC",
-	"description": "",
+	"description": "Tim Bryan Portfolio/Development site",
 	"devDependencies": {
 		"browser-sync": "^2.26.12",
 		"gulp": "^4.0.2",
@@ -17,6 +17,7 @@
 		"gulp-cache": "^1.1.3",
 		"gulp-imagemin": "^7.1.0",
 		"gulp-nunjucks-render": "^2.2.3",
+		"gulp-replace": "^1.0.0",
 		"gulp-sass": "^4.1.0",
 		"gulp-typescript": "^6.0.0-alpha.1",
 		"gulp-uglify": "^3.0.2",
