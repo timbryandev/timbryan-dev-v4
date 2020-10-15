@@ -2,7 +2,7 @@
 
 This repo is for the development of my portofio site. I stage my site using Netlify, then when I'm happy with what I have I then deploy it to me own server.
 
-Staging  : [https://timbryandev.netlify.app/](https://timbryandev.netlify.app/) [![Netlify Status](https://api.netlify.com/api/v1/badges/a45aceb2-eda4-45de-a576-99d08aeeb1a6/deploy-status)](https://app.netlify.com/sites/timbryandev/deploys)
+Staging  : [https://timbryandev.netlify.app/](https://timbryandev.netlify.app/) [![Netlify Status](https://api.netlify.com/api/v1/badges/1091eb01-dde2-46d2-869f-e3db4b302379/deploy-status)](https://app.netlify.com/sites/timbryandev/deploys)
 
 Live site: [https://timbryan.dev/](https://timbryan.dev/)
 
