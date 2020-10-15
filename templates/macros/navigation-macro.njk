@@ -55,8 +55,10 @@
 					><span class="fas fa-university" aria-hidden="true"></span> Education</a
 				>
 			</li>
-			<li>
-				<a href="/about"><span class="fas fa-info-circle" aria-hidden="true"></span> About</a>
+			<li class="{%if currentPage == 'about' %} current {% endif %}">
+				<a href="/about"
+					><span class="fas fa-info-circle" aria-hidden="true"></span> About</a
+				>
 			</li>
 		</ul>
 	</div>
