@@ -1,8 +1,6 @@
 <!-- projects.njk -->
 
-{% extends "layout.njk" %} 
-
-{% block content %}
+{% extends "layout.njk" %} {% block content %}
 
 {{ nav.current('projects') }}
 
@@ -11,51 +9,166 @@
 		<header>
 			<h2>
 				<span class="fas fa-code" aria-hidden="true"></span>
-				Projects
+				Work Projects
 			</h2>
 		</header>
 		<section>
+			<h3>Scientific Calculator Modal</h3>
+
+			<p>
+				This project required our online assessments to have a built-in calculator feature.
+				Using <a href="https://github.com/PitPik/CalcSS3">CalcSS3</a> as a base, I extended
+				the features to include most of the features (all apart from the grey-ed out
+				buttons) you can see below on a screenshot of the finished product:
+			</p>
+			<img
+				src="./images/projects/calculator.png"
+				alt="BPP Branded Calculator"
+				class="responsive center"
+			/>
+
+			<p class="subtle">Technologies: <strong> HTML5, CSS3, Javascript </strong></p>
+		</section>
+		<section>
+			<h3>Workspace Question Type with Spreadsheet, Word Processor &amp; Slide Inputs</h3>
+			<p>
+				One of BPP&apos;s great USPs is their ability to prepare students for their external
+				exams. This project saw us take on the challange of building a question type that
+				functioned like a "workspace" where you would have floating windows with resources
+				and exhibits relating to the question scenario. The user is also presented with
+				Requirements for the question and involves them processing the information in the
+				given resources and giving their responses via a Word Processor and/or Spreadsheet
+				input option.
+			</p>
+			<figure>
+				<figcaption>(This image has blured deliberatly)</figcaption>
+				<img
+					src="./images/projects/workspace-assessment.png"
+					alt="BPP Workspace question type"
+					class="responsive center"
+				/>
+			</figure>
+			<p>
+				When complete, the users attempt data from the input options in then recorded in the
+				VLE (Moodle, in our case) as SCORM data and a PDF for the entries to be manually
+				marked and to be downloaded as a revision aid.
+			</p>
+
+			<p class="subtle">
+				Technologies:
+				<strong>
+					HTML5, CSS3, Javascript, jQuery,
+					<a href="https://www.grapecity.com/spreadjs">SpreadJS</a>,
+					<a href="https://www.tiny.cloud/features">TinyMCE</a>,
+					<a href="https://www.questionmark.com/platform-services/questionmark-platform/"
+						>QuestionMark Perception5</a
+					></strong
+				>
+			</p>
+		</section>
+		<section>
+			<h3>Team Wiki</h3>
+			<p>
+				Bespoke wiki built by my team and me, for my team and me plus the wider business. We
+				opted to build the wiki with GatsbyJS and served via Netlify as both of these were
+				relatively new technologies to our team and we wanted to get some real hands on
+				experience with them.
+			</p>
+			<p>
+				The wiki is split into three main sections for explaining and demonstrating our
+				teams: processes, tools and guides.
+			</p>
+			<p class="subtle">
+				Technologies: <strong> ReactJS, GatsbyJS, NodeJS, GitHub, Netlify</strong>
+			</p>
+		</section>
+
+		<header>
+			<h2>
+				<span class="fas fa-code" aria-hidden="true"></span>
+				Personal Projects
+			</h2>
+		</header>
+		<section>
+			<h3>This site!</h3>
+			<p>
+				For as long as I've been working with web-tech, I've been building, re-building and
+				re-inventing this site to work as a portfolio of skills and work but also as an
+				excuse to constantly learn and work with new technologies, new skills and sharpen
+				old ones.
+			</p>
+			<p>
+				I also have asperations to build this site out even further to host extra
+				functionality such as a micro-blogging site.
+			</p>
+			<p class="subtle">
+				Technologies:
+				<strong
+					>HTML5, CSS3, SCSS, Javascript, Typescript, Gulp, GitHub, Netlify (for staging),
+					<a href="http://www.a2hosting.com/refer/205144">a2 Hosting</a>,
+					<a href="https://en.wikipedia.org/wiki/LAMP_(software_bundle)">LAMP</a></strong
+				>
+			</p>
+		</section>
+		<section>
 			<h3>Multi-purpose home server</h3>
 			<p>
-				The original plan was to use a Rasberry Pi 3B+ until I fried the CPU (shorted the 5V
-				to the 3.3V rail…). So, I&apos;ve currently assembled a server from old desktop
-				computer parts, running Debian at its heart with a typical LAMP setup plus other
-				goodies for experimenting and development stuff.
+				I&apos;ve assembled a server from my desktop computer parts, running Debian at its
+				heart with a typical LAMP setup, plus other goodies for experimenting, development
+				and learning.
 			</p>
-			<p>What it does now</p>
+			<p><strong>What it does now:</strong></p>
 			<ul class="arrow">
-				<li>Nextcloud: for easy file backups, storing and sharing</li>
-				<li>JellyFin: easy music and video consumption</li>
+				<li>
+					Nextcloud: similar to Google Drive but self hosted and has a nice range of
+					third-party plugins/apps/intergrations for power users.
+				</li>
+				<li>JellyFin: Easy music and video consumption.</li>
+				<li>
+					SMB Server: Samba shares for easy file access on my Windows, Linux and mobile
+					devices
+				</li>
 			</ul>
-			<p>Things I hope to do in the future</p>
+			<p><strong>Things I hope to do in the future</strong></p>
 			<ul class="arrow">
 				<li>CCTV Live feed, backup, and offsite backups in case of sabotage</li>
 				<li>Simple home automation</li>
 			</ul>
+
+			<p class="subtle">
+				Technologies:
+				<strong>Debian, LAMP, Nextcloud, JellyFin, Networking</strong>
+			</p>
 		</section>
 		<section>
 			<h3>"PiHole"</h3>
 			<p>
-				The goal: network-wide ad blocking using a Raspberry Pi and
+				The goal: network wide ad-blocking using a Raspberry Pi 2011.12 (my first RPi love)
+				and
 				<a href="https://pi-hole.net/" title="Go to PiHole's website">PiHole</a>.
 			</p>
 			<p>
-				Since I finished getting this working and implemented it into my home router, I can
-				now enjoy the wonders of the internet with the peace of mind that
-				<strong>all</strong> the internet-connected devices at home will be free from
-				<em>most</em> ads and tracking services. This makes everything feel quicker by
-				loading fewer resources, safer by allowing me to block suspicious domains
-				network-wide and enjoy the web with fewer interruptions. I pay/donate to the
-				services and products I want to enjoy and feel I shouldn&apos;t need to subsidise
-				them any further with my ad and tracking data.
+				I now enjoy the wonders of the internet with the peace of mind that
+				<strong>all</strong> internet-connected devices at home will be free from (most)
+				tracking services as well as the ability to block access to certain sites or
+				restrict internet access for specific devices and/or at specific times. This makes
+				everything feel quicker by loading fewer resources, is safer by allowing me to block
+				suspicious domains network-wide, and enjoy the web with fewer interruptions. I
+				pay/donate to the services and products I want to enjoy and feel I shouldn&apos;t
+				need to subsidise them any further with my ad/tracking data.
+			</p>
+			<p class="subtle">
+				Technologies:
+				<strong>Raspberry Pi, Networking</strong>
 			</p>
 		</section>
 		<section>
 			<h3>Quizzing Buzzers</h3>
 			<p>
-				A friend likes to host a bi-annual quiz and for a long time, they wished to have a
-				"fastest finger" round but was limited by his options for implementing such a type
-				of round.
+				i have a close friend who enjoys hosting their a bi-annual quiz and has done for a
+				long time. We came up with the idea of a "fastest finger" round, but was limited by
+				the options for implementing such a type of round into the traditionally paper-based
+				quiz.
 			</p>
 			<p>
 				Enter Tim, with an Arduino Uno and a couple of weekends. I built 3 physical buzzers
@@ -68,8 +181,12 @@
 				displayed on the host&apos;s LCD.
 			</p>
 			<p>
-				Currently working on a V2.0 after feedback from the successful first outing - hoping
-				they will see the light of day again in a future quiz round.
+				We&apos;ve been in talks about building a V2 of the physcial buzzers as well as
+				discussing ideas of turning their quiz into an app (side project/WIP).
+			</p>
+			<p class="subtle">
+				Technologies:
+				<strong>Arduino UNO, C++, Electronics, Woodwork, DIY</strong>
 			</p>
 		</section>
 	</article>

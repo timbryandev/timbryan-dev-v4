@@ -64,6 +64,7 @@ body {
 .container {
 	max-width: 800px;
 	margin: auto;
+	padding: 1rem;
 }
 
 h2,
@@ -138,6 +139,10 @@ h2 .svg-inline--fa {
 	background-color: $deep-jungle-green;
 	border-bottom: 1px solid $dark-green;
 
+	.container {
+		padding: 0;
+	}
+
 	.logo {
 		font-size: 1.5em;
 		font-weight: bold;
@@ -211,9 +216,8 @@ h2 .svg-inline--fa {
 	}
 }
 
-main.container,
-#contact {
-	margin-top: 3rem;
+main.container {
+	padding-top: 3rem;
 }
 
 #footer {
@@ -263,6 +267,26 @@ section#OnlinePresence {
 .text-primary,
 a {
 	color: $primary;
+}
+
+img {
+	border-radius: 3px;
+}
+
+img.responsive {
+	max-width: 70vw;
+	height: auto;
+	max-height: 70vh;
+}
+
+img.center {
+	display: block;
+	margin: auto;
+}
+
+.subtle {
+	color: lighten($deep-jungle-green, 25);
+	font-size: smaller;
 }
 
 .sr-only {
@@ -339,6 +363,7 @@ input[type='button'],
 		background-image: url('../images/headerbkg-w400.jpg');
 	}
 }
+
 @media (min-width: 800px) {
 	nav.navbar .container {
 		position: sticky;
@@ -358,4 +383,6 @@ input[type='button'],
 			display: none;
 		}
 	}
+
+ 
 }
