@@ -29,22 +29,6 @@ function navToggleDropdown() {
 	}
 }
 
-function scrollToTop() {
-	window.scrollTo(0, 0);
-}
-
-function scrollToContent() {
-	const nav: HTMLElement | null = document.querySelector('.navbar');
-	if (!nav) return;
-
-	nav.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-function setPagePosition() {
-	scrollToTop();
-	setTimeout(scrollToContent, 500);
-}
-
 function initForm() {
 	const form: HTMLFormElement | any = document.querySelector('#contact form');
 	if (!form) return;
@@ -90,7 +74,6 @@ function initForm() {
 }
 
 function init() {
-	setPagePosition();
 	calculateDates();
 	initForm();
 }
