@@ -94,7 +94,8 @@ h2 .svg-inline--fa {
 }
 
 #header {
-	height: 50vh;
+	height: 90vh;
+	height: calc(100vh - 70px);
 	width: 100%;
 	position: relative;
 
