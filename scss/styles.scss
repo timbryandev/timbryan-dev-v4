@@ -52,6 +52,16 @@ body {
   min-width: 260px;
 }
 
+body.theme1 {
+  --base: #264653;
+  --dark: #2a9d8f;
+  --primary: #f4a261;
+  --alternative: #e9c46a;
+  --secondary: #e76f51;
+  --light: #fefefe;
+  --subtle: lighten(#2a9d8f, 25);
+}
+
 .container {
   max-width: 800px;
   margin: auto;
