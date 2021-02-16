@@ -30,3 +30,6 @@ I'm hoping to expand on what I have already into something bigger, such as a blo
 `npm watch` - runs a gulp script that will build a local version of the whole project and runs browser-sync to send any watched folders to the web browser
 
 `npm clean` - runs a prettier script to nicely format the ts, scss and html files
+
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
