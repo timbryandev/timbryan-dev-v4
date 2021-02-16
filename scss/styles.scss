@@ -100,9 +100,6 @@ h2 .svg-inline--fa {
 
   svg {
     height: 50%;
-    .logo-arrow-left {
-      fill: var(--primary);
-    }
   }
 
   .header-background,
@@ -132,6 +129,10 @@ h2 .svg-inline--fa {
   .header-text {
     display: none;
   }
+}
+
+.TBLogo .logo-arrow-left {
+  fill: var(--primary);
 }
 
 .navbar {
