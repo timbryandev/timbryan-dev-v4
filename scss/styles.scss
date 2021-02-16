@@ -5,22 +5,22 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
 /**
-  * Fonts
-  */
+ * Fonts
+ */
 
 @import url('https://fonts.googleapis.com/css?family=Fugaz+One:400|Montserrat');
 $headings-font-family: Fugaz One;
 $body-font-family: Montserrat;
 
 /**
-  * Other Variables
-  */
+ * Other Variables
+ */
 
 $padding: 0.5rem 1rem;
 
 /**
-  * Apply Styles
-  */
+ * Apply Styles
+ */
 
 :root {
   --base: #002626;
@@ -28,7 +28,7 @@ $padding: 0.5rem 1rem;
   --primary: #95c623;
   --secondary: #e55812;
   --light: #fefefe;
-  --subtle: lighten(var(--dark), 25);
+  --subtle: lighten(#0e4749, 25);
 }
 
 *,
@@ -52,6 +52,16 @@ body {
   min-width: 260px;
 }
 
+body.theme1 {
+  --base: #264653;
+  --dark: #2a9d8f;
+  --primary: #f4a261;
+  --alternative: #e9c46a;
+  --secondary: #e76f51;
+  --light: #fefefe;
+  --subtle: lighten(#2a9d8f, 25);
+}
+
 .container {
   max-width: 800px;
   margin: auto;
@@ -63,9 +73,17 @@ h3,
 h4,
 h5,
 h6 {
-  text-shadow: 0 0 1px var(--dark);
   font-family: $headings-font-family;
   font-weight: 400;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  text-shadow: 0px 1px 1px var(--base);
 }
 
 h2 {
@@ -90,9 +108,6 @@ h2 .svg-inline--fa {
 
   svg {
     height: 50%;
-    .logo-arrow-left {
-      fill: var(--yellow-green);
-    }
   }
 
   .header-background,
@@ -122,6 +137,10 @@ h2 .svg-inline--fa {
   .header-text {
     display: none;
   }
+}
+
+.TBLogo .logo-arrow-left {
+  fill: var(--primary);
 }
 
 .navbar {
@@ -161,6 +180,7 @@ h2 .svg-inline--fa {
     a {
       display: block;
       border-radius: 3px;
+      text-shadow: none;
     }
 
     :hover {
@@ -202,7 +222,7 @@ h2 .svg-inline--fa {
     height: 100%;
     padding: $padding;
     text-decoration: none;
-    color: light;
+    color: var(--light);
     cursor: pointer;
   }
 }
@@ -242,7 +262,6 @@ section#OnlinePresence {
 
   a {
     margin: 15px;
-    text-decoration: none;
   }
 }
 
@@ -318,6 +337,16 @@ select {
   &:focus {
     box-shadow: 0 0 5px var(--primary);
     border: 1px solid var(--primary);
+  }
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s;
+
+  &:hover {
+    border-bottom-color: currentColor;
   }
 }
 
