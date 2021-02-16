@@ -5,22 +5,22 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
 /**
-  * Fonts
-  */
+ * Fonts
+ */
 
 @import url('https://fonts.googleapis.com/css?family=Fugaz+One:400|Montserrat');
 $headings-font-family: Fugaz One;
 $body-font-family: Montserrat;
 
 /**
-  * Other Variables
-  */
+ * Other Variables
+ */
 
 $padding: 0.5rem 1rem;
 
 /**
-  * Apply Styles
-  */
+ * Apply Styles
+ */
 
 :root {
   --base: #002626;
@@ -28,7 +28,7 @@ $padding: 0.5rem 1rem;
   --primary: #95c623;
   --secondary: #e55812;
   --light: #fefefe;
-  --subtle: lighten(var(--dark), 25);
+  --subtle: lighten(#0e4749, 25);
 }
 
 *,
@@ -91,7 +91,7 @@ h2 .svg-inline--fa {
   svg {
     height: 50%;
     .logo-arrow-left {
-      fill: var(--yellow-green);
+      fill: var(--primary);
     }
   }
 
@@ -202,7 +202,7 @@ h2 .svg-inline--fa {
     height: 100%;
     padding: $padding;
     text-decoration: none;
-    color: light;
+    color: var(--light);
     cursor: pointer;
   }
 }
