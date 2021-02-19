@@ -1,3 +1,5 @@
+const THEME_DEFAULT: string = 'theme-dark';
+
 function calculateDates() {
 	function calculateDate(tag: HTMLSpanElement | any) {
 		const start: Date = new Date(tag.dataset.start);
@@ -48,7 +50,6 @@ function initForm() {
 	}
 
 	// helper function for sending an AJAX request
-
 	function ajax(method: string, url: string, data: FormData) {
 		const xhr: XMLHttpRequest = new XMLHttpRequest();
 		xhr.open(method, url);
@@ -65,7 +66,6 @@ function initForm() {
 	}
 
 	// handle the form submission event
-
 	form.addEventListener('submit', function (evt: Event) {
 		evt.preventDefault();
 		const data: FormData = new FormData(form);
@@ -73,7 +73,29 @@ function initForm() {
 	});
 }
 
+function setTheme(themeName: string) {
+	window.localStorage.setItem('theme', themeName);
+	document.body.className = themeName;
+}
+
+function toggleTheme() {
+	if (window.localStorage.getItem('theme') === THEME_DEFAULT) {
+		setTheme('theme1');
+	} else {
+		setTheme(THEME_DEFAULT);
+	}
+}
+
+function initTheme() {
+	if (window.localStorage.getItem('theme') === THEME_DEFAULT) {
+		setTheme(THEME_DEFAULT);
+	} else {
+		setTheme('theme1');
+	}
+}
+
 function init() {
+	initTheme();
 	calculateDates();
 	initForm();
 }
