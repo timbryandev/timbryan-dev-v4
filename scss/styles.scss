@@ -173,29 +173,16 @@ h2 .svg-inline--fa {
 
     li {
       display: inline;
-      border-radius: 3px;
       margin: 0 1px;
     }
 
     a {
       display: block;
-      border-radius: 3px;
       text-shadow: none;
     }
 
-    :hover {
-      background-color: var(--primary);
-      color: var(--base);
-    }
-
-    .current {
-      background-color: var(--secondary);
-      color: var(--base);
-    }
-
-    :hover a,
     .current a {
-      color: inherit;
+      color: var(--secondary);
     }
   }
 
