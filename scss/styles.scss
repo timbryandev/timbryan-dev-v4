@@ -350,6 +350,13 @@ input[type='button'],
     color: var(--base);
   }
 }
+
+.theme-toggle: {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
 /**
   * Media Queries
   */
