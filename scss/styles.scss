@@ -182,7 +182,8 @@ h2 .svg-inline--fa {
     }
 
     .current a {
-      color: var(--secondary);
+      color: var(--primary);
+      border-bottom-color: currentColor;
     }
   }
 
@@ -258,10 +259,6 @@ section#OnlinePresence {
   max-width: 200px;
   width: 40%;
   margin: 0 15px 15px 15px;
-  -webkit-border-radius: 45%;
-  -moz-border-radius: 45%;
-  -ms-border-radius: 45%;
-  -o-border-radius: 45%;
 }
 
 .text-primary,
