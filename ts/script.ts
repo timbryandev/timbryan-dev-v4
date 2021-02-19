@@ -1,3 +1,5 @@
+const THEME_DEFAULT: string = 'theme-dark';
+
 function calculateDates() {
 	function calculateDate(tag: HTMLSpanElement | any) {
 		const start: Date = new Date(tag.dataset.start);
@@ -77,18 +79,18 @@ function setTheme(themeName: string) {
 }
 
 function toggleTheme() {
-	if (window.localStorage.getItem('theme') === 'theme-dark') {
-		setTheme('theme-light');
+	if (window.localStorage.getItem('theme') === THEME_DEFAULT) {
+		setTheme('theme1');
 	} else {
-		setTheme('theme-dark');
+		setTheme(THEME_DEFAULT);
 	}
 }
 
 function initTheme() {
-	if (window.localStorage.getItem('theme') === 'theme-dark') {
-		setTheme('theme-dark');
+	if (window.localStorage.getItem('theme') === THEME_DEFAULT) {
+		setTheme(THEME_DEFAULT);
 	} else {
-		setTheme('theme-light');
+		setTheme('theme1');
 	}
 }
 
