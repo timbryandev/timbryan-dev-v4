@@ -48,7 +48,6 @@ function initForm() {
 	}
 
 	// helper function for sending an AJAX request
-
 	function ajax(method: string, url: string, data: FormData) {
 		const xhr: XMLHttpRequest = new XMLHttpRequest();
 		xhr.open(method, url);
@@ -65,7 +64,6 @@ function initForm() {
 	}
 
 	// handle the form submission event
-
 	form.addEventListener('submit', function (evt: Event) {
 		evt.preventDefault();
 		const data: FormData = new FormData(form);
@@ -73,7 +71,29 @@ function initForm() {
 	});
 }
 
+function setTheme(themeName: string) {
+	window.localStorage.setItem('theme', themeName);
+	document.body.className = themeName;
+}
+
+function toggleTheme() {
+	if (window.localStorage.getItem('theme') === 'theme-dark') {
+		setTheme('theme-light');
+	} else {
+		setTheme('theme-dark');
+	}
+}
+
+function initTheme() {
+	if (window.localStorage.getItem('theme') === 'theme-dark') {
+		setTheme('theme-dark');
+	} else {
+		setTheme('theme-light');
+	}
+}
+
 function init() {
+	initTheme();
 	calculateDates();
 	initForm();
 }
