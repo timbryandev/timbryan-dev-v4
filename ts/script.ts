@@ -2,6 +2,10 @@ const THEME_DARK: string = 'theme-dark';
 const THEME_LIGHT: string = 'theme-light';
 const THEME_DEFAULT: string = THEME_DARK;
 
+(window as any).THEME_DARK = THEME_DARK;
+(window as any).THEME_LIGHT = THEME_LIGHT;
+(window as any).THEME_DEFAULT = THEME_DEFAULT;
+
 function calculateDates() {
 	function calculateDate(tag: HTMLSpanElement | any) {
 		const start: Date = new Date(tag.dataset.start);
@@ -93,7 +97,7 @@ function initTheme() {
 		window.matchMedia &&
 		window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-	const currentTheme: string = window.localStorage.getItem('theme');
+	const currentTheme: string = window.localStorage.getItem('theme') || '';
 	
 	if (currentTheme) {
 		setTheme(currentTheme);
