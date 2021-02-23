@@ -87,10 +87,17 @@ function toggleTheme() {
 }
 
 function initTheme() {
-	if (window.localStorage.getItem('theme') === THEME_DEFAULT) {
+	const prefersDarkTheme: boolean =
+		window.matchMedia &&
+		window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+	const currentTheme: string =
+		window.localStorage.getItem('theme') || THEME_DEFAULT;
+
+	if (currentTheme === THEME_DEFAULT || prefersDarkTheme) {
 		setTheme(THEME_DEFAULT);
 	} else {
-		setTheme('theme1');
+		setTheme('theme-light');
 	}
 }
 
