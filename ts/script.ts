@@ -1,4 +1,6 @@
-const THEME_DEFAULT: string = 'theme-dark';
+const THEME_DARK: string = 'theme-dark';
+const THEME_LIGHT: string = 'theme-light';
+const THEME_DEFAULT: string = THEME_DARK;
 
 function calculateDates() {
 	function calculateDate(tag: HTMLSpanElement | any) {
@@ -79,10 +81,10 @@ function setTheme(themeName: string) {
 }
 
 function toggleTheme() {
-	if (window.localStorage.getItem('theme') === THEME_DEFAULT) {
-		setTheme('theme1');
+	if (window.localStorage.getItem('theme') === THEME_DARK) {
+		setTheme(THEME_LIGHT);
 	} else {
-		setTheme(THEME_DEFAULT);
+		setTheme(THEME_DARK);
 	}
 }
 
@@ -91,13 +93,16 @@ function initTheme() {
 		window.matchMedia &&
 		window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-	const currentTheme: string =
-		window.localStorage.getItem('theme') || THEME_DEFAULT;
-
-	if (currentTheme === THEME_DEFAULT || prefersDarkTheme) {
-		setTheme(THEME_DEFAULT);
-	} else {
-		setTheme('theme-light');
+	const currentTheme: string = window.localStorage.getItem('theme');
+	
+	if (currentTheme) {
+		setTheme(currentTheme);
+	}
+	else if (prefersDarkTheme) {
+		setTheme(THEME_DARK);
+	}
+	else {
+		setTheme(THEME_LIGHT);
 	}
 }
 
