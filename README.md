@@ -1,5 +1,9 @@
 # timbryan-dev
 
+*[deprecated] This repo has been superceeded by <https://github.com/timbryandev/timbryan-dev>*
+
+---
+
 This repo is for the development of my portofio site. I stage my site using Netlify, then when I'm happy with what I have I then deploy it to me own server.
 
 Staging: [https://timbryandev-staging.netlify.app/](https://timbryandev-staging.netlify.app/)
