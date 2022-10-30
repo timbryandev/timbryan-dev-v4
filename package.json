@@ -11,7 +11,7 @@
 	"license": "ISC",
 	"description": "Tim Bryan Portfolio/Development site",
 	"devDependencies": {
-		"browser-sync": "^2.26.12",
+		"browser-sync": "^2.27.10",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "latest",
 		"gulp-cache": "^1.1.3",
